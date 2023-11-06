@@ -83,7 +83,6 @@ const SingleEliminationBracket = ({
     roundHeader,
     currentRound
   );
-  console.log("hello there")
 
   return (
     <ThemeProvider theme={theme}>
@@ -157,7 +156,6 @@ const SingleEliminationBracket = ({
                             style,
                           }}
                           winner={match.name == 'Winner'}
-                          match={match.name}
                         />
                       )}
                       <g>

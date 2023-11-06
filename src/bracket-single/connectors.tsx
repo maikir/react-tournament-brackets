@@ -11,10 +11,7 @@ const Connectors = ({
   style,
   offsetY = 0,
   winner = false,
-  match = ''
 }) => {
-  console.log(winner)
-  console.log(match)
   const {
     columnWidth,
 
