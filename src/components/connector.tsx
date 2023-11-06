@@ -44,7 +44,7 @@ const Connector = ({
       (roundHeader.isShown ? roundHeader.height + roundHeader.marginBottom : 0);
     const horizontalWidthRight = previousMatch.x + width;
 
-    if (isPreviousMatchOnSameYLevel || winner) {
+    if (isPreviousMatchOnSameYLevel) {
       return [`M${startPoint}`, `H${horizontalWidthRight}`];
     }
 
