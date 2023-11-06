@@ -100,7 +100,7 @@ const SingleEliminationBracket = ({
             <g>
               {columns.map((matchesColumn, columnIndex) =>
                 matchesColumn.map((match, rowIndex) => {
-                  const { x, y } = calculatePositionOfMatch(
+                  let { x, y } = calculatePositionOfMatch(
                     rowIndex,
                     columnIndex,
                     {
@@ -109,6 +109,17 @@ const SingleEliminationBracket = ({
                       rowHeight,
                     }
                   );
+                  if (match.name == 'Winner') {
+                    y = calculatePositionOfMatch(
+                      rowIndex,
+                      columnIndex -1,
+                      {
+                        canvasPadding,
+                        columnWidth,
+                        rowHeight,
+                      }
+                    ).y
+                  }
                   const previousBottomPosition = (rowIndex + 1) * 2 - 1;
 
                   const { previousTopMatch, previousBottomMatch } =
