@@ -83,6 +83,7 @@ const SingleEliminationBracket = ({
     roundHeader,
     currentRound
   );
+  console.log("hello there")
 
   return (
     <ThemeProvider theme={theme}>
