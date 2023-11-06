@@ -10,6 +10,7 @@ const Connectors = ({
   columnIndex,
   style,
   offsetY = 0,
+  winner = false,
 }) => {
   const {
     columnWidth,
@@ -53,6 +54,7 @@ const Connectors = ({
       previousTopMatchPosition={previousTopMatchPosition}
       currentMatchPosition={currentMatchPosition}
       style={style}
+      winner={winner}
     />
   );
 };

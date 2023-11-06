@@ -8,6 +8,7 @@ const Connector = ({
   previousTopMatchPosition = null,
   currentMatchPosition,
   style,
+  winner = false,
 }) => {
   const {
     boxHeight,
@@ -70,7 +71,7 @@ const Connector = ({
           stroke={topHighlighted ? connectorColorHighlight : connectorColor}
         />
       )}
-      {previousBottomMatchPosition && (
+      {!winner && previousBottomMatchPosition && (
         <path
           d={pathInfo(1).join(' ')}
           id={`connector-${x}-${y}-${1}`}

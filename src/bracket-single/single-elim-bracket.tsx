@@ -155,6 +155,7 @@ const SingleEliminationBracket = ({
                             gameWidth,
                             style,
                           }}
+                          winner={match.name == 'Winner'}
                         />
                       )}
                       <g>
