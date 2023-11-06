@@ -25,14 +25,6 @@ const Connector = ({
     const middlePointOfMatchComponent = boxHeight / 2;
     const previousMatch =
       multiplier > 0 ? previousBottomMatchPosition : previousTopMatchPosition;
-    const startPoint = `${
-      currentMatchPosition.x - horizontalOffset - lineInfo.separation
-    } ${
-      currentMatchPosition.y +
-      lineInfo.homeVisitorSpread * multiplier +
-      middlePointOfMatchComponent +
-      (roundHeader.isShown ? roundHeader.height + roundHeader.marginBottom : 0)
-    }`;
     const horizontalWidthLeft =
       currentMatchPosition.x - roundSeparatorWidth / 2 - horizontalOffset;
     const isPreviousMatchOnSameYLevel =
@@ -44,7 +36,19 @@ const Connector = ({
       (roundHeader.isShown ? roundHeader.height + roundHeader.marginBottom : 0);
     const horizontalWidthRight = previousMatch.x + width;
 
-    if (isPreviousMatchOnSameYLevel) {
+    const startPoint = `${
+      currentMatchPosition.x - horizontalOffset - lineInfo.separation
+    } ${ winner ? (
+        verticalHeight
+      ) : (
+        currentMatchPosition.y +
+        lineInfo.homeVisitorSpread * multiplier +
+        middlePointOfMatchComponent +
+        (roundHeader.isShown ? roundHeader.height + roundHeader.marginBottom : 0)
+      )
+    }`;
+
+    if (isPreviousMatchOnSameYLevel || winner) {
       return [`M${startPoint}`, `H${horizontalWidthRight}`];
     }
 
