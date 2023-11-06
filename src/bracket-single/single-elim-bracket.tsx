@@ -110,7 +110,6 @@ const SingleEliminationBracket = ({
                     }
                   );
                   if (match.name == 'Winner') {
-                    console.log("I am here")
                     y = calculatePositionOfMatch(
                       rowIndex,
                       columnIndex - 1,
