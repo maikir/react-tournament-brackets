@@ -73,7 +73,7 @@ const Connector = ({
           id={`connector-${x}-${y}-${-1}`}
           fill="transparent"
           stroke={connectorColor}
-          stroke-opacity={(bracketSnippet?.previousTopMatch.state == 'Finished' || bracketSnippet?.previousBottomMatch.state == 'Finished') ? '100%' : '20%'}
+          stroke-opacity={(bracketSnippet?.previousTopMatch?.state == 'Finished' || bracketSnippet?.previousBottomMatch?.state == 'Finished') ? '100%' : '20%'}
         />
       )}
       {!winner && previousBottomMatchPosition && (
@@ -82,7 +82,7 @@ const Connector = ({
           id={`connector-${x}-${y}-${1}`}
           fill="transparent"
           stroke={connectorColor}
-          stroke-opacity={(bracketSnippet?.previousTopMatch.state == 'Finished' || bracketSnippet?.previousBottomMatch.state == 'Finished') ? '100%' : '20%'}
+          stroke-opacity={(bracketSnippet?.previousTopMatch?.state == 'Finished' || bracketSnippet?.previousBottomMatch?.state == 'Finished') ? '100%' : '20%'}
         />
       )}
 
