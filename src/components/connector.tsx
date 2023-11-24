@@ -72,7 +72,7 @@ const Connector = ({
           d={pathInfo(-1).join(' ')}
           id={`connector-${x}-${y}-${-1}`}
           fill="transparent"
-          stroke={topHighlighted ? connectorColorHighlight : connectorColor}
+          stroke={connectorColor}
         />
       )}
       {!winner && previousBottomMatchPosition && (
@@ -80,7 +80,7 @@ const Connector = ({
           d={pathInfo(1).join(' ')}
           id={`connector-${x}-${y}-${1}`}
           fill="transparent"
-          stroke={bottomHighlighted ? connectorColorHighlight : connectorColor}
+          stroke={connectorColor}
         />
       )}
 
