@@ -65,6 +65,7 @@ const Connector = ({
   });
 
   const { x, y } = currentMatchPosition;
+  console.log("new update pushed")
   return (
     <>
       {previousTopMatchPosition && (
