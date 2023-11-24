@@ -65,7 +65,6 @@ const Connector = ({
   });
 
   const { x, y } = currentMatchPosition;
-  alert('hello')
   return (
     <>
       {previousTopMatchPosition && (
