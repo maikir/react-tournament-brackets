@@ -14,7 +14,6 @@ const Connectors = ({
 }) => {
   const {
     columnWidth,
-
     rowHeight,
     canvasPadding,
   } = getCalculatedStyles(style);
